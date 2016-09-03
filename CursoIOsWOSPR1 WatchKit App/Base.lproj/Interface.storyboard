@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CursoIOsWOSPR1_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="110" height="149" alignment="center" layout="vertical" id="R2P-yl-czW">
+                            <items>
+                                <imageView width="80" height="42" alignment="center" image="pizza" id="AEi-MI-BpA"/>
+                                <picker height="55" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="gzd-5Z-OiC">
+                                    <connections>
+                                        <action selector="pizzaOrderSelItmAct:" destination="AgC-eL-Hgc" id="obU-15-tgf"/>
+                                    </connections>
+                                </picker>
+                                <button width="1" height="21.5" alignment="left" alpha="0.80000000000000004" title="Seleccione" id="iLt-q2-vbI">
+                                    <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="italicSystem" weight="bold" pointSize="15"/>
+                                    <connections>
+                                        <action selector="pizzaOrderAction" destination="AgC-eL-Hgc" id="Iu7-IN-xgH"/>
+                                    </connections>
+                                </button>
+                                <label width="1" alignment="left" text="ABCDEFGHIJK" textAlignment="left" id="V04-x6-cJs">
+                                    <color key="textColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="italicSystem" weight="bold" pointSize="16"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="pizzaOrdenDetail" destination="V04-x6-cJs" id="cBz-U8-FmB"/>
+                        <outlet property="pizzaOrderPicker" destination="gzd-5Z-OiC" id="wKF-rU-Feb"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="179" y="148"/>
+        </scene>
+        <!--PizzaTamano-->
+        <scene sceneID="LNO-rt-M0f">
+            <objects>
+                <controller identifier="PizzaTamano" id="H2t-tZ-f9x" customClass="pizzaTamView" customModule="CursoIOsWOSPR1_WatchKit_Extension">
+                    <items>
+                        <group width="136" height="131" alignment="left" layout="vertical" id="z2G-as-35m">
+                            <items>
+                                <label alignment="center" text="Tamaño" id="LRe-lW-mXa">
+                                    <fontDescription key="font" type="italicSystem" weight="bold" pointSize="24"/>
+                                </label>
+                                <picker height="43" alignment="left" focusStyle="sequence" id="S3t-eZ-h5h">
+                                    <connections>
+                                        <action selector="pizzaTamSelAcc:" destination="H2t-tZ-f9x" id="Df8-HW-ZQe"/>
+                                    </connections>
+                                </picker>
+                                <group width="1" alignment="left" layout="vertical" id="Nel-WR-zII">
+                                    <items>
+                                        <label alignment="left" text="Su elección:" id="TKZ-Mh-dMC"/>
+                                        <label alignment="left" text=" " id="FNv-yH-yNJ">
+                                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="pickerTamano" destination="S3t-eZ-h5h" id="iGt-OJ-QVP"/>
+                        <outlet property="pizzaSelTam" destination="FNv-yH-yNJ" id="3Hl-pv-FPl"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="555" y="-997"/>
+        </scene>
+        <!--PizzaMasa-->
+        <scene sceneID="wCN-9a-Weo">
+            <objects>
+                <controller identifier="PizzaMasa" id="TYQ-UE-Ibt" customClass="pizzaMasView" customModule="CursoIOsWOSPR1_WatchKit_Extension">
+                    <items>
+                        <group width="136" height="131" alignment="left" layout="vertical" id="XKZ-Rh-zqv">
+                            <items>
+                                <label alignment="center" text="Masa" id="Htt-Xz-s1E">
+                                    <fontDescription key="font" type="italicSystem" weight="bold" pointSize="24"/>
+                                </label>
+                                <picker height="43" alignment="left" focusStyle="sequence" id="fbq-m5-HGc">
+                                    <connections>
+                                        <action selector="selMasaOption:" destination="TYQ-UE-Ibt" id="chj-ji-Sab"/>
+                                    </connections>
+                                </picker>
+                                <group width="1" alignment="left" layout="vertical" id="2Zx-4c-2DQ">
+                                    <items>
+                                        <label alignment="left" text="Su elección:" id="7ms-dl-0XZ"/>
+                                        <label alignment="left" text=" " id="Y5E-0I-T46">
+                                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="pickerMasa" destination="fbq-m5-HGc" id="eAw-lu-pej"/>
+                        <outlet property="pizzaSelMasa" destination="Y5E-0I-T46" id="Sf8-d4-gbS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="555" y="-715"/>
+        </scene>
+        <!--PizzaQueso-->
+        <scene sceneID="3R3-it-pxx">
+            <objects>
+                <controller identifier="PizzaQueso" id="qIN-WO-mBA" customClass="pizzaQueView" customModule="CursoIOsWOSPR1_WatchKit_Extension">
+                    <items>
+                        <group width="136" height="131" alignment="left" layout="vertical" id="HHG-cB-tqK">
+                            <items>
+                                <label alignment="center" text="Queso" id="qIT-sS-VQa">
+                                    <fontDescription key="font" type="italicSystem" weight="bold" pointSize="24"/>
+                                </label>
+                                <picker height="43" alignment="left" focusStyle="sequence" id="KcZ-HJ-Zft">
+                                    <connections>
+                                        <action selector="selQuesoOption:" destination="qIN-WO-mBA" id="cRj-PP-WTM"/>
+                                    </connections>
+                                </picker>
+                                <group width="1" alignment="left" layout="vertical" id="GyX-Ky-ECy">
+                                    <items>
+                                        <label alignment="left" text="Su elección:" id="rzL-36-LUb"/>
+                                        <label alignment="left" text=" " id="LCg-vN-y2i">
+                                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="pickerQueso" destination="KcZ-HJ-Zft" id="9kO-59-7kd"/>
+                        <outlet property="pizzaSelQueso" destination="LCg-vN-y2i" id="NF1-Nh-fl8"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="555" y="-449"/>
+        </scene>
+        <!--PizzaIngredientes-->
+        <scene sceneID="pCU-g9-LHR">
+            <objects>
+                <controller identifier="PizzaIngredientes" id="5Ca-xB-hnv" customClass="pizzaIngView" customModule="CursoIOsWOSPR1_WatchKit_Extension">
+                    <items>
+                        <group width="136" height="151" alignment="left" layout="vertical" id="lww-2B-zFG">
+                            <items>
+                                <label alignment="center" text="Ingredientes" id="D2y-mp-eAy">
+                                    <fontDescription key="font" type="italicSystem" weight="bold" pointSize="22"/>
+                                </label>
+                                <picker height="46" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="NOW-Ir-gtv">
+                                    <connections>
+                                        <action selector="pizzaPickIngred:" destination="5Ca-xB-hnv" id="4ED-v0-zWc"/>
+                                    </connections>
+                                </picker>
+                                <button width="1" height="21.5" alignment="left" alpha="0.80000000000000004" title="Seleccione" id="b6Q-jv-ys7">
+                                    <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="italicSystem" weight="bold" pointSize="15"/>
+                                    <connections>
+                                        <action selector="assignPizzaIngred" destination="5Ca-xB-hnv" id="Dhi-aM-c9H"/>
+                                    </connections>
+                                </button>
+                                <group width="1" alignment="left" layout="vertical" id="RBZ-Dl-n2e">
+                                    <items>
+                                        <label alignment="left" text="Su elección:" id="cJ0-VN-WVs">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label alignment="left" text=" " id="KyH-M3-oTc">
+                                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="pickerIngredientes" destination="NOW-Ir-gtv" id="VcS-Uc-Ek4"/>
+                        <outlet property="pizzaSelIngredients" destination="KyH-M3-oTc" id="WkH-OJ-f5n"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="790" y="-179"/>
+        </scene>
+        <!--PizzaRebanadas-->
+        <scene sceneID="1g2-OQ-tQZ">
+            <objects>
+                <controller identifier="PizzaRebanadas" id="b9R-Z1-bHX" customClass="pizzaRebView" customModule="CursoIOsWOSPR1_WatchKit_Extension">
+                    <items>
+                        <group width="136" height="131" alignment="left" layout="vertical" id="O8g-EZ-oxG">
+                            <items>
+                                <label alignment="center" text="Rebanadas" id="IbM-Q0-Mpb">
+                                    <fontDescription key="font" type="italicSystem" weight="bold" pointSize="24"/>
+                                </label>
+                                <picker height="43" alignment="left" focusStyle="sequence" id="MQk-9y-dP8">
+                                    <connections>
+                                        <action selector="selRebanadasOption:" destination="b9R-Z1-bHX" id="53B-ik-sap"/>
+                                    </connections>
+                                </picker>
+                                <group width="1" alignment="left" layout="vertical" id="fzd-pe-hoz">
+                                    <items>
+                                        <label alignment="left" text="Su elección:" id="Egr-5W-MIU"/>
+                                        <label alignment="left" text=" " id="cQZ-QV-EGa">
+                                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="pickerRebanadas" destination="MQk-9y-dP8" id="ATi-6A-d4j"/>
+                        <outlet property="pizzaSelRebanadas" destination="cQZ-QV-EGa" id="xf5-kQ-aNO"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="555" y="87"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="208" y="871"/>
+        </scene>
+        <!--PizzaEntrega-->
+        <scene sceneID="ZTa-NI-KcV">
+            <objects>
+                <controller identifier="PizzaEntrega" id="uCa-bH-cZe" customClass="pizzaEntView" customModule="CursoIOsWOSPR1_WatchKit_Extension">
+                    <items>
+                        <group width="136" height="131" alignment="left" layout="vertical" id="pI2-oa-1Ld">
+                            <items>
+                                <label alignment="center" text="Entrega" id="fFF-Am-nRm">
+                                    <fontDescription key="font" type="italicSystem" weight="bold" pointSize="24"/>
+                                </label>
+                                <picker height="43" alignment="left" focusStyle="sequence" id="gbh-qf-tjU">
+                                    <connections>
+                                        <action selector="selEntregaOption:" destination="uCa-bH-cZe" id="FWl-aE-WDG"/>
+                                    </connections>
+                                </picker>
+                                <group width="1" alignment="left" layout="vertical" id="q9a-iR-VpB">
+                                    <items>
+                                        <label alignment="left" text="Su elección:" id="05K-LM-EUi"/>
+                                        <label alignment="left" text=" " id="bhi-DI-YEw">
+                                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="pickerEntrega" destination="gbh-qf-tjU" id="h9Z-Sa-fmB"/>
+                        <outlet property="pizzaSelEntrega" destination="bhi-DI-YEw" id="kW0-zn-ITQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="555" y="351"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="CursoIOsWOSPR1_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="456" y="871"/>
+        </scene>
+    </scenes>
+</document>
